@@ -1,0 +1,267 @@
+/* ===============================
+   GLOBAL RESET
+================================ */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===============================
+   DEFAULT APP CONTAINER
+   (No background here)
+================================ */
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===============================
+   ROLE SELECTION BACKGROUND ONLY
+================================ */
+.role-background {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("./assets/clinic_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Light overlay so text is readable but image visible */
+.role-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  z-index: 0;
+}
+
+/* ===============================
+   ROLE SELECT CARD
+================================ */
+.role-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 45px 60px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  width: 450px;
+}
+
+/* Title */
+.role-card h1 {
+  margin-bottom: 6px;
+  font-size: 28px;
+}
+
+/* Subtitle */
+.role-card p {
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Role buttons container */
+.role-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+/* Role buttons */
+.role-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid #2563eb;
+  background: white;
+  color: #2563eb;
+  width: 120px;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.role-btn:hover {
+  background: #2563eb;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ===============================
+   COMMON CARD UI
+================================ */
+.card {
+  background: white;
+  padding: 40px 50px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* Inputs */
+.card input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* Buttons */
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ===============================
+   UPLOAD PAGE CONTAINER
+================================ */
+.upload-container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+/* ===============================
+   LINKS
+================================ */
+.link-text {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.link-text span {
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ===============================
+   PATIENT HISTORY CARD (RESPONSIVE)
+================================ */
+
+.history-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.history-card p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+/* X-ray image inside history */
+.history-card img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin: 15px 0;
+  object-fit: contain;
+}
+
+/* Delete record button */
+.history-card .delete-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.history-card .delete-btn:hover {
+  background: #c0392b;
+}
+
+/* Doctor dashboard patient record card */
+.record-card {
+  width: 100%;
+  max-width: 420px;
+  margin: 25px auto;
+  padding: 20px;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+/* Make image responsive */
+.record-card img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 12px;
+  border: 1px solid #ddd;
+}
+
+/* Text spacing */
+.record-card p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+  .record-card {
+    max-width: 90%;
+    padding: 15px;
+  }
+}
+
+.dashboard-bg {
+  min-height: 100vh;
+  width: 100%;
+  background: url("./assets/background.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;   /* 🔥 this makes it move with scroll */
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
