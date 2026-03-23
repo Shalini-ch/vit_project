@@ -6,7 +6,7 @@ import re, os, random
 from datetime import datetime
 from pydantic import BaseModel
 
-from dummy_model import predict
+from real_model import predict
 from database import engine, SessionLocal, Base
 import models
 
